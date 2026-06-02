@@ -1,0 +1,46 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Pet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Cadastro do Pet </h1>
+        
+        <form class="form-pet" action="#" method="POST">
+            <label for="nome" class="obrigatorio">Nome do Pet:</label>
+            <input type="text" id="nome" class="input-padrao"
+
+            <label for="email" class="obrigatorio">Número do Proprietario</label>
+            <input type="email" id="email" class="input-padrao" 
+
+            <label for="especie">Espécie:</label>
+            <select id="especie">
+              <option value="cao">Cachorro</option>  
+              <option value="cao">Passaro</option>
+                <option value="gato">Gato</option>
+              <option value="cao">Roedores</option>
+            </select>
+
+            <label>Porte:</label>
+            <input type="radio" id="p" name="porte" value="p"> Pequeno
+            <input type="radio" id="p" name="porte" value="p"> Medio
+            <input type="radio" id="g" name="porte" value="g"> Grande
+
+            <label for="obs">Observações Médicas:</label>
+            <textarea id="obs" placeholder="Alergias, remédios..."></textarea>
+
+            <button type="submit" class="btn-enviar">Salvar Cadastro</button>
+        </form>
+    </main>
+
+    <footer>
+        <p><strong>Integrantes:</strong> Matheus Sebastian e Julio Huazy</p>
+        <p><strong>Disciplina:</strong> Programação Web I</p>
+        <p><strong>Data:</strong> 02/06/2026</p>
+    </footer>
+
+</body>
+</html>
