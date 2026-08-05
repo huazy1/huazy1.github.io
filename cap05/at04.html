@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT04 - Inscrição em Evento</title>
+</head>
+<body>
+
+    <h1>Semana de Tecnologia IFAL</h1>
+
+    <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+
+        <input type="hidden" name="edicao" value="2026">
+
+        <fieldset>
+            <legend>Identificação do Participante</legend>
+
+            <p>
+                <label for="nome">Nome completo *</label><br>
+                <input type="text" id="nome" name="nome" required>
+            </p>
+
+            <p>
+                <label for="email">E-mail institucional *</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <p>
+                <label for="cidade">Cidade de origem</label><br>
+                <input type="text" id="cidade" name="cidade" list="cidades">
+
+                <datalist id="cidades">
+                    <option value="Maceió">
+                    <option value="Arapiraca">
+                    <option value="Palmeira dos Índios">
+                    <option value="Rio Largo">
+                    <option value="União dos Palmares">
+                    <option value="Penedo">
+                    <option value="Delmiro Gouveia">
+                    <option value="São Miguel dos Campos">
+                </datalist>
+            </p>
+
+            <p>
+                <label for="foto">Foto para crachá</label><br>
+                <input
+                    type="file"
+                    id="foto"
+                    name="foto"
+                    accept="image/jpeg,image/png"
+                    aria-describedby="info-foto">
+                <br>
+                <small id="info-foto">
+                    Formatos aceitos: JPG e PNG. Tamanho máximo: 2 MB.
+                </small>
+            </p>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Preferências para o Evento</legend>
+
+            <p>
+                <label for="chegada">Data e hora preferida para chegada</label><br>
+                <input type="datetime-local" id="chegada" name="chegada">
+            </p>
+
+            <p>
+                <label for="experiencia">
+                    Nível de experiência:
+                    <span id="valor-experiencia">5</span>/10
+                </label><br>
+
+                <input
+                    type="range"
+                    id="experiencia"
+                    name="experiencia"
+                    min="0"
+                    max="10"
+                    step="1"
+                    value="5"
+                    oninput="document.getElementById('valor-experiencia').textContent=this.value">
+            </p>
+
+            <p>
+                <label for="cor">Cor de preferência para a camiseta</label><br>
+                <input
+                    type="color"
+                    id="cor"
+                    name="cor_camiseta"
+                    value="#1a73e8">
+            </p>
+
+            <p>
+                <label for="oficinas">Oficinas de interesse</label><br>
+
+                <select
+                    id="oficinas"
+                    name="oficinas[]"
+                    multiple
+                    size="4"
+                    aria-describedby="info-oficinas">
+
+                    <option>Desenvolvimento Web</option>
+                    <option>Banco de Dados</option>
+                    <option>Inteligência Artificial</option>
+                    <option>Segurança da Informação</option>
+                    <option>Computação em Nuvem</option>
+                </select>
+
+                <br>
+
+                <small id="info-oficinas">
+                    Use Ctrl (ou Cmd no Mac) para selecionar mais de uma oficina.
+                </small>
+            </p>
+
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Confirmar inscrição</button>
+
+    </form>
+
+</body>
+</html>
