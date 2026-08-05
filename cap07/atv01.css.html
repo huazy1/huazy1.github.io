@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semana de Inovação e Tecnologia — IFAL</title>
+
+  <style>
+  
+
+  /* ---------- Base ---------- */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: #333;
+    background-color: #f5f5f5;
+  }
+
+  /* ---------- Cabeçalho ---------- */
+  .cabecalho {
+    background-color: #1565c0;
+    padding: 2rem;
+  }
+
+  h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .subtitulo {
+    color: #bbdefb;
+    font-size: 1rem;
+  }
+
+  /* ---------- Menu ---------- */
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+  }
+
+  .menu li {
+    display: inline-block;
+    margin-right: 1.5rem;
+  }
+
+  .menu > ul a {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  .menu > ul a::before {
+    content: "› ";
+  }
+
+  .menu > ul a:hover {
+    text-decoration: underline;
+  }
+
+  /* ---------- Seções ---------- */
+  .secao {
+    padding: 2rem;
+    max-width: 70%;
+    margin: auto;
+  }
+
+  h2 {
+    color: #1565c0;
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    color: #0d47a1;
+    font-size: 1.25rem;
+  }
+
+  h2 + p {
+    margin-top: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .destaque {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #b71c1c;
+  }
+
+  .destaque ~ p {
+    background: #fff8dc;
+    padding: .5rem;
+  }
+
+  /* ---------- Cartões ---------- */
+  .cartao {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 1em;
+    margin: .5em;
+  }
+
+  .cartao:nth-child(odd) {
+    background: #fff;
+  }
+
+  .cartao:nth-child(even) {
+    background: #eef5ff;
+  }
+
+  .cartao:not(:last-child) {
+    margin-bottom: 1em;
+  }
+
+  .botao {
+    display: inline-block;
+    background: #1565c0;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: .5em 1em;
+    margin-top: .5em;
+    border-radius: 4px;
+  }
+
+  .cartao .botao {
+    border-radius: 20px;
+  }
+
+  .botao:hover {
+    background: #0d47a1;
+  }
+
+  /* ---------- Lista ---------- */
+  .lista-dias {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  .lista-dias > li {
+    font-weight: bold;
+  }
+
+  .lista-dias > li:first-child {
+    color: green;
+  }
+
+  .lista-dias > li:last-child {
+    color: red;
+  }
+
+  /* ---------- Formulário ---------- */
+  .formulario {
+    max-width: 60%;
+  }
+
+  label {
+    display: block;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  label::after {
+    content: " *";
+    color: red;
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: .5rem;
+    margin-top: .25rem;
+    border: 1px solid #999;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: 2px solid #1565c0;
+  }
+
+  input[type="email"] {
+    border: 2px solid #1565c0;
+  }
+
+  input[type="password"] {
+    border: 2px solid #b71c1c;
+  }
+
+  button {
+    font-size: 1rem;
+    color: #fff;
+    background: #1565c0;
+    padding: .5rem 1.5rem;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #0d47a1;
+  }
+
+  /* ---------- Rodapé ---------- */
+  .rodape {
+    background: #263238;
+    color: #cfd8dc;
+    padding: 1.5rem;
+    font-size: .875rem;
+    text-align: center;
+  }
+  </style>
+
+</head>
+<body>
+
+<header class="cabecalho">
+  <h1>Semana de Inovação e Tecnologia</h1>
+  <p class="subtitulo">Instituto Federal de Alagoas — Campus Maceió</p>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#trilhas">Trilhas</a></li>
+      <li><a href="#programacao">Programação</a></li>
+      <li><a href="#inscricao">Inscrição</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<section id="sobre" class="secao">
+  <h2>Sobre o evento</h2>
+  <p>A Semana de Inovação e Tecnologia reúne estudantes, docentes e profissionais em torno de palestras, oficinas e maratonas de desenvolvimento.</p>
+  <p>São cinco dias de atividades gratuitas, distribuídas em quatro trilhas temáticas.</p>
+  <p class="destaque">As inscrições são limitadas e encerram na sexta-feira anterior ao evento.</p>
+</section>
+
+<section id="trilhas" class="secao">
+  <h2>Trilhas temáticas</h2>
+
+  <div class="grade">
+
+    <article class="cartao">
+      <h3>Desenvolvimento Web</h3>
+      <p>Fundamentos de HTML, CSS e JavaScript.</p>
+      <a href="#inscricao" class="botao">Inscrever-se</a>
+    </article>
+
+    <article class="cartao">
+      <h3>Ciência de Dados</h3>
+      <p>Coleta e visualização de dados.</p>
+      <a href="#inscricao" class="botao">Inscrever-se</a>
+    </article>
+
+    <article class="cartao">
+      <h3>Internet das Coisas</h3>
+      <p>Prototipagem com microcontroladores.</p>
+      <a href="#inscricao" class="botao">Inscrever-se</a>
+    </article>
+
+    <article class="cartao">
+      <h3>Segurança da Informação</h3>
+      <p>Proteção de sistemas e redes.</p>
+      <a href="#inscricao" class="botao">Inscrever-se</a>
+    </article>
+
+  </div>
+</section>
+
+<section id="programacao" class="secao">
+  <h2>Programação por dia</h2>
+
+  <ul class="lista-dias">
+    <li>Segunda-feira
+      <ul>
+        <li>Credenciamento</li>
+        <li>Palestra de abertura</li>
+      </ul>
+    </li>
+
+    <li>Terça-feira
+      <ul>
+        <li>Oficina de HTML</li>
+        <li>Oficina de CSS</li>
+      </ul>
+    </li>
+
+    <li>Quarta-feira
+      <ul>
+        <li>Maratona</li>
+        <li>Encerramento</li>
+      </ul>
+    </li>
+  </ul>
+
+</section>
+
+<section id="inscricao" class="secao">
+
+  <h2>Inscrição</h2>
+
+  <p>Preencha os dados abaixo.</p>
+
+  <form class="formulario">
+
+    <label for="nome">Nome completo</label>
+    <input type="text" id="nome">
+
+    <label for="email">E-mail</label>
+    <input type="email" id="email">
+
+    <label for="telefone">Telefone</label>
+    <input type="tel" id="telefone">
+
+    <label for="senha">Senha de acesso</label>
+    <input type="password" id="senha">
+
+    <label for="mensagem">Observações</label>
+    <textarea id="mensagem" rows="4"></textarea>
+
+    <button type="submit">Enviar inscrição</button>
+
+  </form>
+
+</section>
+
+</main>
+
+<footer class="rodape">
+  <p>Semana de Inovação e Tecnologia — IFAL, Campus Maceió.</p>
+  <p>Contato: eventos@ifal.edu.br</p>
+</footer>
+
+</body>
+</html>
