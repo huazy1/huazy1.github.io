@@ -1,0 +1,39 @@
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT01 - Formulário de Contato Simples</title>
+</head>
+<body>
+
+    <h1>Formulário de Contato</h1>
+
+    <form action="https://httpbin.org/get" method="get">
+
+        <p>
+            <label for="nome">Nome completo:</label><br>
+            <input type="text" id="nome" name="nome">
+        </p>
+
+        <p>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email">
+        </p>
+
+        <p>
+            <label for="assunto">Assunto:</label><br>
+            <input type="text" id="assunto" name="assunto">
+        </p>
+
+        <p>
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+        </p>
+
+        <button type="submit">Enviar mensagem</button>
+
+    </form>
+
+</body>
+</html>
