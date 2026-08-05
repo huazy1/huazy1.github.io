@@ -1,0 +1,227 @@
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWEB1 — Cap. 05 — AT05 — Formulário de Pesquisa Acadêmica</title>
+</head>
+<body>
+
+<header>
+  <h1>Formulário de Pesquisa Acadêmica</h1>
+  <p><a href="../index.html">← Voltar para a página principal</a></p>
+</header>
+
+<main>
+
+<p><strong>* Campos obrigatórios</strong></p>
+
+<form action="https://httpbin.org/post" method="post" novalidate>
+
+  <input type="hidden" name="pesquisa_id" value="PWEB1-2026-1">
+
+  <!-- Perfil do estudante -->
+  <fieldset>
+    <legend>Perfil do Estudante</legend>
+
+    <label for="nome">Nome completo *</label><br>
+    <input type="text" id="nome" name="nome" required aria-required="true" autocomplete="name">
+    <br><br>
+
+    <label for="matricula">Matrícula *</label><br>
+    <input type="text" id="matricula" name="matricula"
+           pattern="\d{7}" required
+           aria-required="true"
+           aria-describedby="info-matricula">
+    <small id="info-matricula">Digite 7 números.</small>
+    <br><br>
+
+    <label for="email">E-mail institucional *</label><br>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      pattern="[a-zA-Z0-9._%+\-]+@ifal\.edu\.br"
+      required
+      autocomplete="email"
+      aria-required="true"
+      aria-invalid="false"
+      aria-describedby="erro-email"
+      onblur="validarEmail(this)">
+    <p id="erro-email" role="alert"></p>
+
+    <label for="periodo">Período *</label><br>
+    <select id="periodo" name="periodo" required aria-required="true">
+      <option value="">Selecione</option>
+      <option>1º</option>
+      <option>2º</option>
+      <option>3º</option>
+      <option>4º</option>
+      <option>5º</option>
+      <option>6º</option>
+      <option>7º</option>
+      <option>8º</option>
+    </select>
+
+    <fieldset>
+      <legend>Turno</legend>
+
+      <input type="radio" id="manha" name="turno" value="Manhã">
+      <label for="manha">Manhã</label>
+
+      <input type="radio" id="tarde" name="turno" value="Tarde">
+      <label for="tarde">Tarde</label>
+
+      <input type="radio" id="noite" name="turno" value="Noite">
+      <label for="noite">Noite</label>
+    </fieldset>
+
+  </fieldset>
+
+  <br>
+
+  <!-- Perfil Tecnológico -->
+  <fieldset>
+    <legend>Perfil Tecnológico</legend>
+
+    <fieldset>
+      <legend>Tecnologias que conhece</legend>
+
+      <input type="checkbox" name="tecnologias[]" value="HTML"> HTML<br>
+      <input type="checkbox" name="tecnologias[]" value="CSS"> CSS<br>
+      <input type="checkbox" name="tecnologias[]" value="JavaScript"> JavaScript<br>
+      <input type="checkbox" name="tecnologias[]" value="Java"> Java<br>
+      <input type="checkbox" name="tecnologias[]" value="Python"> Python<br>
+      <input type="checkbox" name="tecnologias[]" value="PHP"> PHP<br>
+      <input type="checkbox" name="tecnologias[]" value="SQL"> SQL<br>
+      <input type="checkbox" name="tecnologias[]" value="Git"> Git
+    </fieldset>
+
+    <br>
+
+    <label for="linguagem">Linguagem favorita</label><br>
+    <select id="linguagem" name="linguagem">
+      <optgroup label="Orientada a Objetos">
+        <option>Java</option>
+        <option>C#</option>
+      </optgroup>
+
+      <optgroup label="Script">
+        <option>JavaScript</option>
+        <option>Python</option>
+        <option>PHP</option>
+      </optgroup>
+    </select>
+
+    <br><br>
+
+    <label for="anos">Anos de experiência</label><br>
+    <input type="number" id="anos" name="anos" min="0" max="30">
+
+    <br><br>
+
+    <label for="portfolio">Portfólio ou LinkedIn</label><br>
+    <input type="url"
+           id="portfolio"
+           name="portfolio"
+           placeholder="https://"
+           aria-describedby="info-link">
+    <small id="info-link">Informe um link válido.</small>
+
+  </fieldset>
+
+  <br>
+
+  <!-- Avaliação -->
+  <fieldset>
+    <legend>Avaliação da Disciplina</legend>
+
+    <label for="nota">
+      Nota da disciplina:
+      <span id="valor-nota">5</span>/10
+    </label><br>
+
+    <input
+      type="range"
+      id="nota"
+      name="nota"
+      min="0"
+      max="10"
+      value="5"
+      oninput="document.getElementById('valor-nota').textContent=this.value">
+
+    <br><br>
+
+    <fieldset>
+      <legend>Satisfação</legend>
+
+      <input type="radio" name="satisfacao" value="Muito satisfeito"> Muito satisfeito<br>
+      <input type="radio" name="satisfacao" value="Satisfeito"> Satisfeito<br>
+      <input type="radio" name="satisfacao" value="Neutro"> Neutro<br>
+      <input type="radio" name="satisfacao" value="Insatisfeito"> Insatisfeito<br>
+      <input type="radio" name="satisfacao" value="Muito insatisfeito"> Muito insatisfeito
+    </fieldset>
+
+    <br>
+
+    <label for="sugestoes">Sugestões</label><br>
+    <textarea id="sugestoes" name="sugestoes" rows="6" maxlength="1000"></textarea>
+
+    <br><br>
+
+    <label for="data_preenchimento">Data de preenchimento *</label><br>
+    <input type="date"
+           id="data_preenchimento"
+           name="data_preenchimento"
+           required
+           aria-required="true">
+
+  </fieldset>
+
+  <br>
+
+  <!-- Consentimento -->
+  <fieldset>
+    <legend>Consentimento e Envio</legend>
+
+    <input
+      type="checkbox"
+      id="consentimento"
+      name="consentimento"
+      required
+      aria-required="true">
+
+    <label for="consentimento">
+      Autorizo o uso dos dados para fins acadêmicos.
+    </label>
+
+    <br><br>
+
+    <button type="submit">Enviar Pesquisa</button>
+    <button type="reset">Limpar</button>
+
+  </fieldset>
+
+</form>
+
+</main>
+
+<script>
+function validarEmail(campo) {
+  const erro = document.getElementById('erro-email');
+
+  if (!campo.value.endsWith('@ifal.edu.br')) {
+    erro.textContent = 'Informe seu e-mail institucional (@ifal.edu.br)';
+    campo.setAttribute('aria-invalid', 'true');
+  } else {
+    erro.textContent = '';
+    campo.setAttribute('aria-invalid', 'false');
+  }
+}
+
+document.getElementById('data_preenchimento').max =
+  new Date().toISOString().split('T')[0];
+</script>
+
+</body>
+</html>
