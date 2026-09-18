@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     TEMPLATE — Página pessoal com CSS Grid
+     Programação Web / Introdução às Tecnologias Web — IFAL
+
+     COMO USAR:
+     1) Copie ESTE index.html para o seu repositório (não mude a estrutura).
+     2) Escolha UM dos 3 temas de CSS (tema-1-indigo.css, tema-2-escuro.css
+        ou tema-3-editorial.css) e salve-o no seu projeto como  estilo.css
+        (é o nome que este HTML carrega logo abaixo).
+     3) Troque os textos marcados com "TROQUE" pelo seu conteúdo.
+
+     IMPORTANTE: o LAYOUT é feito com CSS Grid e é o mesmo nos 3 temas.
+     Você escolhe a APARÊNCIA (fonte, cores, bordas), não o layout.
+     ============================================================ -->
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Pessoal — Julio Huazy Gomes de Almeida</title>
+  <!-- Salve o tema escolhido como "estilo.css" (mesma pasta deste arquivo) -->
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+  <div class="pagina">
+
+    <!-- ====== CABEÇALHO — TROQUE pelo seu nome e sua frase ====== -->
+    <header class="cabecalho">
+      <h1>Julio Huazy Gomes de Almeida</h1>
+      <p>Estudante de Sistemas de Informação · IFAL</p>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <!-- ====== CONTEÚDO PRINCIPAL ====== -->
+    <main class="principal">
+      <section id="sobre" class="cartao">
+        <h2>Sobre mim</h2>
+        <!-- TROQUE por uma breve apresentação sua -->
+        <p> Eu sou uma pessoa que gosta muito de jogar bola
+            não sou tão chegado com livos mas algumas vezes 
+            ainda leu um pouco.Meu hobbie é jogar bola gosto 
+            de varios esportes mais prefiro bola meu interrese 
+            é aprender mais sobre computação.</p>
+      </section>
+
+      <section id="projetos" class="cartao">
+        <h2>Projetos</h2>
+        <!-- Galeria com Grid: cada .projeto é um card; adicione/remova à vontade -->
+        <div class="projetos">
+          <article class="projeto">
+            <h3>Projeto 1</h3>
+               
+            <ul> 
+            <li><a href="http://www.ifal.edu.br" >link para a pagina</li>
+            <li><a href="/cop04/at01-tabela-basica.html">Atividade 01 cap04</li>
+		  <li><a href="/cop04/at02-tabela-semantica.html">Atividade 02 cap04</li> 
+		  <li><a href="/cop04/at03-listas-avancadas.html">Atividade 03 cap04</li> 
+		  </a>
+		  </ul>
+               
+          </article>
+          <article class="projeto">
+            <h3>Projeto 2</h3>
+            <p</p>
+          </article>
+          <article class="projeto">
+            <h3>Projeto 3</h3>
+            <p></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ====== BARRA LATERAL ====== -->
+    <aside class="lateral">
+      <section class="cartao">
+        <h2>Habilidades</h2>
+        <!-- TROQUE pelas suas habilidades -->
+        <ul class="habilidades">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Grid</li>
+          <li>JavaScript</li>
+        </ul>
+      </section>
+
+      <section id="contato" class="cartao">
+        <h2>Contato</h2>
+        <!-- TROQUE pelos seus links -->
+        <ul class="contato">
+          <li>✉️ <a href="jhga1@aluno.ifal.edu.br">jhga1@aluno.ifal.edu.br</a></li>
+          <li>🐙 <a href="https://github.com/huazy1/huazy1.github.io">github.com/JULIO-HUAZY</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- ====== RODAPÉ — TROQUE o nome ====== -->
+    <footer class="rodape">© 2026 julio Huazy Gomes de Almeida · feito com HTML + CSS Grid</footer>
+
+  </div>
+</body>
+
+</html>
