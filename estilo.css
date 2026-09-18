@@ -1,0 +1,114 @@
+/* ============================================================
+   TEMA 2 — ESCURO (dark / tech)
+   Para usar: salve este arquivo como  estilo.css  no seu projeto.
+   Você pode mudar CORES, FONTE e BORDAS aqui.
+   NÃO mexa na seção "LAYOUT (GRID)" — é o layout pedido na atividade.
+   ============================================================ */
+
+/* ---- Cores e fonte (mude à vontade) ---- */
+:root {
+  --cor: #7c83ff;
+  --cor2: #4dd0e1;
+  --texto: #e6e8f5;
+  --suave: #a0a3c0;
+  --fundo: #0f1020;
+  --superficie: #191b33;
+  --borda: #2a2d4a;
+  --raio: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--texto);
+  background: var(--fundo);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   LAYOUT (GRID) — NÃO MUDE
+   ============================================================ */
+* { box-sizing: border-box; }
+
+.pagina {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-areas:
+    "cabecalho cabecalho"
+    "principal lateral"
+    "rodape    rodape";
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.cabecalho { grid-area: cabecalho; }
+.principal { grid-area: principal; }
+.lateral   { grid-area: lateral; }
+.rodape    { grid-area: rodape; }
+
+.projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 14px;
+}
+
+@media (max-width: 640px) {
+  .pagina {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "cabecalho"
+      "principal"
+      "lateral"
+      "rodape";
+  }
+}
+/* ===================== fim do LAYOUT ===================== */
+
+/* ---- Aparência (mude à vontade) ---- */
+.cabecalho {
+  background: linear-gradient(135deg, #1b1e3a, #10243a);
+  color: #fff;
+  padding: 32px;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+}
+.cabecalho h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  /* título com degradê (efeito "tech") */
+  background: linear-gradient(90deg, var(--cor), var(--cor2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.cabecalho p { margin: 6px 0 0; color: var(--suave); }
+.cabecalho nav { margin-top: 16px; display: flex; gap: 18px; flex-wrap: wrap; }
+.cabecalho nav a { color: var(--cor2); text-decoration: none; font-weight: 600; }
+.cabecalho nav a:hover { text-decoration: underline; }
+
+.cartao {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 22px;
+}
+.cartao + .cartao { margin-top: 24px; }
+h2 { color: var(--cor); margin-top: 0; }
+
+.projeto {
+  background: #12142a;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 16px;
+}
+.projeto h3 { margin: 0 0 6px; color: var(--cor2); }
+
+.habilidades { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.habilidades li { background: #12142a; border: 1px solid var(--cor); color: var(--cor); border-radius: 999px; padding: 4px 12px; font-size: .9rem; }
+.contato { list-style: none; padding: 0; margin: 0; }
+.contato li { margin: 10px 0; }
+.contato a { color: var(--cor2); }
+.rodape { text-align: center; color: var(--suave); padding: 8px; font-size: .9rem; }
