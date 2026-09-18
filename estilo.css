@@ -1,11 +1,4 @@
-/* ============================================================
-   TEMA 2 — ESCURO (dark / tech)
-   Para usar: salve este arquivo como  estilo.css  no seu projeto.
-   Você pode mudar CORES, FONTE e BORDAS aqui.
-   NÃO mexa na seção "LAYOUT (GRID)" — é o layout pedido na atividade.
-   ============================================================ */
 
-/* ---- Cores e fonte (mude à vontade) ---- */
 :root {
   --cor: #7c83ff;
   --cor2: #4dd0e1;
